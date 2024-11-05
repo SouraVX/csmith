@@ -300,7 +300,11 @@ Statement::make_random(CGContext &cg_context,
 		s = StatementFor::make_random(cg_context);
 		break;
 	case eIfElse:
-		s = StatementIf::make_random(cg_context);
+	    if (CGOptions::no_if())
+			// std::cout << "no if" << std::endl;
+		    break;
+		else
+			s = StatementIf::make_random(cg_context);
 		break;
 	case eInvoke:
 		s = StatementExpr::make_random(cg_context);

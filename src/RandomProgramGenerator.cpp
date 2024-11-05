@@ -219,6 +219,7 @@ static void print_help()
 	cout << "  --int128 | --no-int128: enable | disable generate __int128 as datatype extension (disabled by default)." << endl << endl;
 	cout << "  --uint128 | --no-uint128: enable | disable generate unsigned __int128 as datatype extension (disabled by default)." << endl << endl;
 	cout << "  --binary-constant | --no-binary-constant: enable | disable generate binary constant (disabled by default)." << endl << endl;
+	cout << "  --no-if: enable | do not generate if statements (disabled by default)." << endl << endl;
 
 }
 
@@ -1524,6 +1525,11 @@ main(int argc, char **argv)
       CGOptions::max_array_length_per_dimension(5);
       continue;
     }
+
+	if (strcmp (argv[i], "--no-if") == 0) {
+			CGOptions::no_if(true);
+			continue;
+	}
 		// OMIT help
 
 		// OMIT compute-hash

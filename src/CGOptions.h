@@ -481,6 +481,9 @@ public:
 
 	static bool binary_constant(void);
 	static bool binary_constant(bool p);
+
+	static bool no_if(void);
+	static bool no_if(bool p);
 private:
 	static bool enabled_builtin_kind(const string &kind);
 
@@ -632,6 +635,7 @@ private:
 	static bool     Int128_;
 	static bool     UInt128_;
 	static bool	binary_constant_;
+	static bool	no_if_;
 private:
 	CGOptions(void);
 	CGOptions(CGOptions &cgo);

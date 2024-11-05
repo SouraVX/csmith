@@ -195,6 +195,7 @@ DEFINE_GETTER_SETTER_BOOL(lang_cpp);
 DEFINE_GETTER_SETTER_BOOL(cpp11);
 DEFINE_GETTER_SETTER_BOOL(fast_execution);
 DEFINE_GETTER_SETTER_INT(array_oob_prob);
+DEFINE_GETTER_SETTER_BOOL(no_if);
 
 //GCC C Extensions
 DEFINE_GETTER_SETTER_BOOL(func_attr_flag);
@@ -319,6 +320,7 @@ CGOptions::set_default_settings(void)
 	Int128(false);
 	UInt128(false);
 	binary_constant(false);
+	no_if(false);
 }
 
 // Add options necessary for cpp 
